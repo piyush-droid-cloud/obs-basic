@@ -1,0 +1,10 @@
+apiVersion: 1
+providers:
+  - name: 'Starter dashboards'
+    orgId: 1
+    folder: 'Starter'
+    type: file
+    disableDeletion: false
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/dashboards
