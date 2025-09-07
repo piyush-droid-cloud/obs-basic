@@ -1,5 +1,21 @@
 # Observability Starter: Monitor a Web App with Prometheus + Grafana (Docker Desktop)
 
+This project demonstrates how to **monitor a simple web application** using **Prometheus** and **Grafana**, containerized with **Docker Desktop**.  
+It collects metrics like **CPU, Memory, and Request Count**, and visualizes them in Grafana dashboards.  
+
+## 📌 Features
+- ✅ Web app containerized with Docker  
+- ✅ Metrics collection using **Prometheus**  
+- ✅ Beautiful visualizations in **Grafana**  
+- ✅ Easy setup with `docker-compose`  
+- ✅ Beginner-friendly observability project  
+
+## 🛠️ Tech Stack
+- **Prometheus** → Metrics collection  
+- **Grafana** → Dashboards & visualization  
+- **Docker + Docker Compose** → Container orchestration  
+- **Web App** → (Flask / Node.js / Nginx – whichever you used)  
+
 ## Quickstart
 ```bash
 # 1) From this folder:
@@ -18,7 +34,8 @@ A background `loadgen` container sends traffic to the app so you can see metrics
 
 ## Create a basic Grafana dashboard (manually)
 1. Login to Grafana → **New dashboard** → **Add visualization** → **Prometheus** datasource.
-2. Use these example queries:
+   (Remember if using both Grafana and prometheus with docker desktop then put URL connection this http://prometheus:9090/)
+3. Use these example queries:
 
 - **Requests per second (by endpoint)**  
   ```promql
@@ -53,3 +70,9 @@ docker compose down
 # or to also clear volumes:
 docker compose down -v
 ```
+**##Future Improvements**
+
+Add Alertmanager for alerts (CPU, Memory thresholds)
+Add Loki for log monitoring
+Deploy on Kubernetes for scaling
+Export Grafana dashboards as JSON
